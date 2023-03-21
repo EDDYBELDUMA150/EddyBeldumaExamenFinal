@@ -8,21 +8,11 @@
     android:backgroundTint="#885EB1A5"
     tools:context=".InicioApp">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="191dp"
-        android:layout_height="179dp"
-        android:layout_marginTop="68dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:srcCompat="@tools:sample/avatars" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="36dp"
         android:text="Usuarios del mes"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,7 +23,7 @@
         android:id="@+id/btVerDa"
         android:layout_width="143dp"
         android:layout_height="74dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#5084EC"
         android:text="VER DATOS"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,4 +43,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btVerDa"
         app:layout_constraintVertical_bias="0.14" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="247dp"
+        android:layout_height="338dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="82dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/iconoo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
