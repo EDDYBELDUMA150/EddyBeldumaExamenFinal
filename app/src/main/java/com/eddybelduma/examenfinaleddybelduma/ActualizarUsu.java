@@ -99,6 +99,7 @@ public class ActualizarUsu extends AppCompatActivity {
             public void onClick(View v) {
                 String idAPI = idbuscar.getText().toString();
                 actualizarDatos(idbuscar, nombre, email, genero, estadoAC);
+                borrarCampos();
             }
         });
     }
@@ -149,12 +150,15 @@ public class ActualizarUsu extends AppCompatActivity {
                     public void onResponse(String response) {
                         // Manejar la respuesta de la API
                         Log.d("RESPONSE", "La respuesta es: " + response + url);
+                        Toast.makeText(ActualizarUsu.this, "Se actualizo los datos correctamente", Toast.LENGTH_LONG).show();
 
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 // Manejar errores de la API
+                Log.d("RESPONSE", "La respuesta es: " + error + url);
+                Toast.makeText(ActualizarUsu.this, "Error al actualizar", Toast.LENGTH_LONG).show();
             }
         }) {
             @Override
@@ -239,6 +243,14 @@ public class ActualizarUsu extends AppCompatActivity {
             idAPI = idVer.getText().toString();
             requestQueue.add(stringRequest);
         }
+    }
+
+    private void borrarCampos(){
+        idVer.setText("000000");
+        nombre.setText("");
+        email.setText("");
+        genero.setSelection(0);
+        grupo.clearCheck();
     }
 
 }
